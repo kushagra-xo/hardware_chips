@@ -1,0 +1,18 @@
+/*
+ * File: Xor.hdl
+ * Author: Kushagra J
+ * Description: Implementation of the Xor chip, i.e. (x! * y) + (x * !y) boolean expression
+ * 
+ */
+
+CHIP Xor{
+	IN a,b;
+	OUT out;
+
+	PARTS:
+	Not (in=a, out=Nota);
+	Not (in=b, out=Notb);
+	And (a=a, b=Notb, out=aAndNotb);
+	And (a=Nota, b=b, out=NotaAndb);
+	Or  (a=aAndNotb, b=NotaAndb, out=out);
+}
