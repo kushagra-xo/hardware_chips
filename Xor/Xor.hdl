@@ -1,8 +1,6 @@
-/*
- * File: Xor.hdl
- * Author: Kushagra J
- * Description: Implementation of the Xor chip, i.e. (x! * y) + (x * !y) boolean expression
- * 
+/** 
+ * Xor:
+ * if a != b. out = 1
  */
 
 CHIP Xor{
