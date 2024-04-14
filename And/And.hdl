@@ -4,11 +4,14 @@
  */
 
 CHIP And {
+
     IN a, b;
     OUT out;
     
     PARTS:
+
     Nand (a=a, b=b, out=aNandb1);
     Nand (a=a, b=b, out=aNandb2);
     Nand (a=aNandb1, b=aNandb2, out=out);
+
 }

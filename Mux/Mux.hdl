@@ -4,12 +4,16 @@
  */
 
 CHIP Mux {
+
     IN a, b, sel;
     OUT out;
+
     PARTS:
+
     Not (in=a, out=Nota);
     Not (in=sel, out=Nots);
     And (a=a, b=Nots, out=aAndNots);
     And (a=b, b=sel, out=bAnds);
     Or (a=aAndNots, b=bAnds, out=out);
+
 }

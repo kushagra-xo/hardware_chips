@@ -3,6 +3,7 @@
  * out = in[0] Or in[1] Or ... Or in[7]
  */
 CHIP Or8Way {
+
     IN in[8];
     OUT out;
 
@@ -17,4 +18,5 @@ CHIP Or8Way {
     Or (a=Or3, b=Or4, out=Or20);
 
     Or (a=Or10, b=Or20, out=out);
+
 }
