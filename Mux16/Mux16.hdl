@@ -8,84 +8,22 @@ CHIP Mux16 {
     OUT out[16];
 
     PARTS:
-    Not (in=a[0], out=Nota0);
-    Not (in=sel, out=Nots);
-    And (a=a[0], b=Nots, out=a0AndNots);
-    And (a=b[0], b=sel, out=b0Ands);
-    Or (a=a0AndNots, b=b0Ands, out=out[0]);
 
-    Not (in=a[1], out=Nota1);
-    And (a=a[1], b=Nots, out=a1AndNots);
-    And (a=b[1], b=sel, out=b1Ands);
-    Or (a=a1AndNots, b=b1Ands, out=out[1]);
+    Mux(a=a[0], b=b[0], sel=sel, out=out[0]);
+    Mux(a=a[1], b=b[1], sel=sel, out=out[1]);
+    Mux(a=a[2], b=b[2], sel=sel, out=out[2]);
+    Mux(a=a[3], b=b[3], sel=sel, out=out[3]);
+    Mux(a=a[4], b=b[4], sel=sel, out=out[4]);
+    Mux(a=a[5], b=b[5], sel=sel, out=out[5]);
+    Mux(a=a[6], b=b[6], sel=sel, out=out[6]);
+    Mux(a=a[7], b=b[7], sel=sel, out=out[7]);
+    Mux(a=a[8], b=b[8], sel=sel, out=out[8]);
+    Mux(a=a[9], b=b[9], sel=sel, out=out[9]);
+    Mux(a=a[10], b=b[10], sel=sel, out=out[10]);
+    Mux(a=a[11], b=b[11], sel=sel, out=out[11]);
+    Mux(a=a[12], b=b[12], sel=sel, out=out[12]);
+    Mux(a=a[13], b=b[13], sel=sel, out=out[13]);
+    Mux(a=a[14], b=b[14], sel=sel, out=out[14]);
+    Mux(a=a[15], b=b[15], sel=sel, out=out[15]);
 
-    Not (in=a[2], out=Nota2);
-    And (a=a[2], b=Nots, out=a2AndNots);
-    And (a=b[2], b=sel, out=b2Ands);
-    Or (a=a2AndNots, b=b2Ands, out=out[2]);
-
-    Not (in=a[3], out=Nota3);
-    And (a=a[3], b=Nots, out=a3AndNots);
-    And (a=b[3], b=sel, out=b3Ands);
-    Or (a=a3AndNots, b=b3Ands, out=out[3]);
-
-    Not (in=a[4], out=Nota4);
-    And (a=a[4], b=Nots, out=a4AndNots);
-    And (a=b[4], b=sel, out=b4Ands);
-    Or (a=a4AndNots, b=b4Ands, out=out[4]);
-
-    Not (in=a[5], out=Nota5);
-    And (a=a[5], b=Nots, out=a5AndNots);
-    And (a=b[5], b=sel, out=b5Ands);
-    Or (a=a5AndNots, b=b5Ands, out=out[5]);
-
-    Not (in=a[6], out=Nota6);
-    And (a=a[6], b=Nots, out=a6AndNots);
-    And (a=b[6], b=sel, out=b6Ands);
-    Or (a=a6AndNots, b=b6Ands, out=out[6]);
-
-    Not (in=a[7], out=Nota7);
-    And (a=a[7], b=Nots, out=a7AndNots);
-    And (a=b[7], b=sel, out=b7Ands);
-    Or (a=a7AndNots, b=b7Ands, out=out[7]);
-
-    Not (in=a[8], out=Nota8);
-    And (a=a[8], b=Nots, out=a8AndNots);
-    And (a=b[8], b=sel, out=b8Ands);
-    Or (a=a8AndNots, b=b8Ands, out=out[8]);
-
-    Not (in=a[9], out=Nota9);
-    And (a=a[9], b=Nots, out=a9AndNots);
-    And (a=b[9], b=sel, out=b9Ands);
-    Or (a=a9AndNots, b=b9Ands, out=out[9]);
-
-    Not (in=a[10], out=Nota10);
-    And (a=a[10], b=Nots, out=a10AndNots);
-    And (a=b[10], b=sel, out=b10Ands);
-    Or (a=a10AndNots, b=b10Ands, out=out[10]);
-
-    Not (in=a[11], out=Nota11);
-    And (a=a[11], b=Nots, out=a11AndNots);
-    And (a=b[11], b=sel, out=b11Ands);
-    Or (a=a11AndNots, b=b11Ands, out=out[11]);
-
-    Not (in=a[12], out=Nota12);
-    And (a=a[12], b=Nots, out=a12AndNots);
-    And (a=b[12], b=sel, out=b12Ands);
-    Or (a=a12AndNots, b=b12Ands, out=out[12]);
-
-    Not (in=a[13], out=Nota13);
-    And (a=a[13], b=Nots, out=a13AndNots);
-    And (a=b[13], b=sel, out=b13Ands);
-    Or (a=a13AndNots, b=b13Ands, out=out[13]);
-
-    Not (in=a[14], out=Nota14);
-    And (a=a[14], b=Nots, out=a14AndNots);
-    And (a=b[14], b=sel, out=b14Ands);
-    Or (a=a14AndNots, b=b14Ands, out=out[14]);
-
-    Not (in=a[15], out=Nota15);
-    And (a=a[15], b=Nots, out=a15AndNots);
-    And (a=b[15], b=sel, out=b15Ands);
-    Or (a=a15AndNots, b=b15Ands, out=out[15]);
 }
